@@ -28,4 +28,4 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest tests/test_scientific_calculator.py  # Adjust path if necessary
+        pytest test_scientific_calculator.py  # Adjust path if necessary
