@@ -24,7 +24,7 @@ jobs:
       run: echo "tag=$(date +%s)" >> $GITHUB_ENV
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USERNAME}}/my-python-app:${{ env.tag }}
+      run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USERNAME}}/my-python-app:v1
 
     - name: Push the Docker image to our DockerHub repo Simple Docker Hub
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/my-python-app:${{ env.tag }}
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/my-python-app:v1
